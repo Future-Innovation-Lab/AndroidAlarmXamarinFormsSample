@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AndroidAlarms.MainPage">
+
+    <StackLayout>
+        <StackLayout>
+            <Label Text="Reason"/>
+            <Entry Placeholder="Reason for Alarm" Text="{Binding AlarmReason}"/>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="Hours and Minutes"/>
+            <Entry Placeholder="Hour" Text="{Binding AlarmHour}"/>
+        <Entry Placeholder="Minute" Text="{Binding AlarmMinute}"/>
+        </StackLayout>
+
+        <Button Text="Set Standard Alarm" Command="{Binding SetStandardAlarmCommand}"/>
+
+        <StackLayout>
+            <Label Text="Alarm Time"/>
+            <TimePicker Time="{Binding AlarmTime}"/>
+        </StackLayout>
+        <Button Text="Set Time Alarm" Command="{Binding SetDateTimeAlarmCommand}"/>
+
+
+        <StackLayout>
+            <Label Text="Alarm Day"/>
+            <DatePicker Date="{Binding AlarmDate}"/>
+        </StackLayout>
+        <Button Text="Set DateTime Day Of Week Recurring Alarm" Command="{Binding SetDateTimeDayOfWeekRecurringAlarmCommand}"/>
+    </StackLayout>
+
+</ContentPage>
